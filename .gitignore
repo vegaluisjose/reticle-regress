@@ -1,3 +1,5 @@
-.Xil
-.jou
-.log
+*.Xil
+*.jou
+*.log
+*.dir
+*.pb
