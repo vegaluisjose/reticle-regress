@@ -53,6 +53,7 @@ module main (
     assign t13 = b[5];
     assign t14 = b[6];
     assign t15 = b[7];
+    (* LOC = "SLICE_X0Y3", BEL = "A6LUT" *)
     LUT2 # (
         .INIT(4'h6)
     ) __t16 (
@@ -60,6 +61,7 @@ module main (
         .I1(t8),
         .O(t16)
     );
+    (* LOC = "SLICE_X0Y3", BEL = "B6LUT" *)
     LUT2 # (
         .INIT(4'h6)
     ) __t17 (
@@ -67,6 +69,7 @@ module main (
         .I1(t9),
         .O(t17)
     );
+    (* LOC = "SLICE_X0Y3", BEL = "C6LUT" *)
     LUT2 # (
         .INIT(4'h6)
     ) __t18 (
@@ -74,6 +77,7 @@ module main (
         .I1(t10),
         .O(t18)
     );
+    (* LOC = "SLICE_X0Y3", BEL = "D6LUT" *)
     LUT2 # (
         .INIT(4'h6)
     ) __t19 (
@@ -81,6 +85,7 @@ module main (
         .I1(t11),
         .O(t19)
     );
+    (* LOC = "SLICE_X0Y3", BEL = "E6LUT" *)
     LUT2 # (
         .INIT(4'h6)
     ) __t20 (
@@ -88,6 +93,7 @@ module main (
         .I1(t12),
         .O(t20)
     );
+    (* LOC = "SLICE_X0Y3", BEL = "F6LUT" *)
     LUT2 # (
         .INIT(4'h6)
     ) __t21 (
@@ -95,6 +101,7 @@ module main (
         .I1(t13),
         .O(t21)
     );
+    (* LOC = "SLICE_X0Y3", BEL = "G6LUT" *)
     LUT2 # (
         .INIT(4'h6)
     ) __t22 (
@@ -102,6 +109,7 @@ module main (
         .I1(t14),
         .O(t22)
     );
+    (* LOC = "SLICE_X0Y3", BEL = "H6LUT" *)
     LUT2 # (
         .INIT(4'h6)
     ) __t23 (
@@ -111,6 +119,7 @@ module main (
     );
     assign t24 = gnd;
     assign t25 = {t23, t22, t21, t20, t19, t18, t17, t16};
+    (* LOC = "SLICE_X0Y3", BEL = "CARRY8" *)
     CARRY8 # (
         .CARRY_TYPE("SINGLE_CY8")
     ) __y (
