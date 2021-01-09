@@ -43,10 +43,10 @@ module test_main (
 
     always @(posedge clock) begin
         if (!reset && (cycles >= 32'd4995)) begin
-            $display("[cycles=%4d] a: %d, %d, %d, %d", cycles, $signed(a_0), $signed(a_1), $signed(a_2), $signed(a_3));
-            $display("[cycles=%4d] b: %d, %d, %d, %d", cycles, $signed(b_0), $signed(b_1), $signed(b_2), $signed(b_3));
-            $display("[cycles=%4d] r: %d, %d, %d, %d", cycles, $signed(y_0), $signed(y_1), $signed(y_2), $signed(y_3));
-            $display("[cycles=%4d] e: %d, %d, %d, %d", cycles, $signed(yr_0), $signed(yr_1), $signed(yr_2), $signed(yr_3));
+            $display("[cycles=%4d] [a] %2d, %2d, %2d, %2d", cycles, $signed(a_0), $signed(a_1), $signed(a_2), $signed(a_3));
+            $display("[cycles=%4d] [b] %2d, %2d, %2d, %2d", cycles, $signed(b_0), $signed(b_1), $signed(b_2), $signed(b_3));
+            $display("[cycles=%4d] [r] %2d, %2d, %2d, %2d", cycles, $signed(y_0), $signed(y_1), $signed(y_2), $signed(y_3));
+            $display("[cycles=%4d] [e] %2d, %2d, %2d, %2d", cycles, $signed(yr_0), $signed(yr_1), $signed(yr_2), $signed(yr_3));
             $display("\n\n--------\n\n");
         end
     end

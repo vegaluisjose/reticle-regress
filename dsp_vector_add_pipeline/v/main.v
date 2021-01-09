@@ -15,29 +15,31 @@ module main (
     output wire [7:0] y_2,
     output wire [7:0] y_3
 );
+    wire gnd;
+    wire vcc;
+    wire [47:0] _y;
     GND GND (
         .G(gnd)
     );
     VCC VCC (
         .P(vcc)
     );
-    wire [47:0] _y;
     assign y_0 = _y[7:0];
     assign y_1 = _y[19:12];
     assign y_2 = _y[31:24];
     assign y_3 = _y[43:36];
     DSP48E2 # (
-        .ACASCREG(0),
+        .ACASCREG(1),
         .ADREG(0),
         .ALUMODEREG(0),
         .AMULTSEL("A"),
-        .AREG(0),
+        .AREG(1),
         .AUTORESET_PATDET("NO_RESET"),
         .AUTORESET_PRIORITY("RESET"),
         .A_INPUT("DIRECT"),
-        .BCASCREG(0),
+        .BCASCREG(1),
         .BMULTSEL("B"),
-        .BREG(0),
+        .BREG(1),
         .B_INPUT("DIRECT"),
         .CARRYINREG(0),
         .CARRYINSELREG(0),
@@ -64,7 +66,7 @@ module main (
         .OPMODEREG(0),
         .PATTERN(48'h0),
         .PREADDINSEL("A"),
-        .PREG(0),
+        .PREG(1),
         .RND(48'h0),
         .SEL_MASK("MASK"),
         .SEL_PATTERN("PATTERN"),
@@ -87,19 +89,19 @@ module main (
         .CARRYIN(gnd),
         .CARRYINSEL({gnd, gnd, gnd}),
         .CARRYOUT(),
-        .CEA1(gnd),
-        .CEA2(gnd),
+        .CEA1(en),
+        .CEA2(en),
         .CEAD(gnd),
         .CEALUMODE(gnd),
-        .CEB1(gnd),
-        .CEB2(gnd),
+        .CEB1(en),
+        .CEB2(en),
         .CEC(en),
         .CECARRYIN(gnd),
         .CECTRL(gnd),
         .CED(gnd),
         .CEINMODE(gnd),
         .CEM(gnd),
-        .CEP(gnd),
+        .CEP(en),
         .CLK(clock),
         .D({gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd}),
         .INMODE({gnd, gnd, gnd, gnd, gnd}),
