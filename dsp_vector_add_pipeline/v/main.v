@@ -28,6 +28,7 @@ module main (
     assign y_1 = _y[19:12];
     assign y_2 = _y[31:24];
     assign y_3 = _y[43:36];
+    (*LOC = "DSP48E2_X0Y4", BEL = "DSP_ALU"*)
     DSP48E2 # (
         .ACASCREG(1),
         .ADREG(0),
