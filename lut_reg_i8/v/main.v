@@ -7,22 +7,22 @@ module main (
 );
     wire gnd;
     wire vcc;
-    wire t3;
-    wire t13;
-    wire t2;
-    wire t7;
-    wire t5;
-    wire t12;
-    wire t11;
-    wire t0;
-    wire t4;
-    wire t8;
-    wire t10;
     wire t9;
     wire t6;
-    wire t1;
-    wire t14;
+    wire t4;
+    wire t3;
     wire t15;
+    wire t0;
+    wire t5;
+    wire t10;
+    wire t13;
+    wire t7;
+    wire t14;
+    wire t8;
+    wire t2;
+    wire t12;
+    wire t1;
+    wire t11;
     GND GND (
         .G(gnd)
     );
@@ -37,6 +37,7 @@ module main (
     assign t5 = a[5];
     assign t6 = a[6];
     assign t7 = a[7];
+    (*LOC = "SLICE_X1Y1", BEL = "AFF"*)
     FDSE __t8 (
         .C(clock),
         .CE(en),
@@ -44,6 +45,7 @@ module main (
         .Q(t8),
         .S(reset)
     );
+    (*LOC = "SLICE_X1Y1", BEL = "BFF"*)
     FDSE __t9 (
         .C(clock),
         .CE(en),
@@ -51,6 +53,7 @@ module main (
         .Q(t9),
         .S(reset)
     );
+    (*LOC = "SLICE_X1Y1", BEL = "CFF"*)
     FDRE __t10 (
         .C(clock),
         .CE(en),
@@ -58,6 +61,7 @@ module main (
         .Q(t10),
         .R(reset)
     );
+    (*LOC = "SLICE_X1Y1", BEL = "DFF"*)
     FDRE __t11 (
         .C(clock),
         .CE(en),
@@ -65,6 +69,7 @@ module main (
         .Q(t11),
         .R(reset)
     );
+    (*LOC = "SLICE_X1Y1", BEL = "EFF"*)
     FDRE __t12 (
         .C(clock),
         .CE(en),
@@ -72,6 +77,7 @@ module main (
         .Q(t12),
         .R(reset)
     );
+    (*LOC = "SLICE_X1Y1", BEL = "FFF"*)
     FDRE __t13 (
         .C(clock),
         .CE(en),
@@ -79,6 +85,7 @@ module main (
         .Q(t13),
         .R(reset)
     );
+    (*LOC = "SLICE_X1Y1", BEL = "GFF"*)
     FDRE __t14 (
         .C(clock),
         .CE(en),
@@ -86,6 +93,7 @@ module main (
         .Q(t14),
         .R(reset)
     );
+    (*LOC = "SLICE_X1Y1", BEL = "HFF"*)
     FDRE __t15 (
         .C(clock),
         .CE(en),
