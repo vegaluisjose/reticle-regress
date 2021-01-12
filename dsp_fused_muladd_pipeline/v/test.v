@@ -10,9 +10,9 @@ module test_main (
     logic [16-1:0] y;
     logic [16-1:0] yr;
 
-    assign a = 8'd8;
-    assign b = 8'd2;
-    assign c = 16'd3;
+    assign a = 8'd127;
+    assign b = 8'd1;
+    assign c = -16'd150;
 
     assign en = 1'b1;
 
