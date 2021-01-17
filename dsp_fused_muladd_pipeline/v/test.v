@@ -6,13 +6,13 @@ module test_main (
     logic en;
     logic [8-1:0] a;
     logic [8-1:0] b;
-    logic [16-1:0] c;
-    logic [16-1:0] y;
-    logic [16-1:0] yr;
+    logic [8-1:0] c;
+    logic [8-1:0] y;
+    logic [8-1:0] yr;
 
     assign a = 8'd127;
     assign b = 8'd1;
-    assign c = -16'd150;
+    assign c = -8'd50;
 
     assign en = 1'b1;
 

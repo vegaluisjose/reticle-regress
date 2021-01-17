@@ -3,9 +3,9 @@ module main (
     input wire reset,
     input wire [7:0] a,
     input wire [7:0] b,
-    input wire [15:0] c,
+    input wire [7:0] c,
     input wire en,
-    output wire [15:0] y
+    output wire [7:0] y
 );
     wire gnd;
     wire vcc;
@@ -16,7 +16,7 @@ module main (
     VCC VCC (
         .P(vcc)
     );
-    assign y = _y[15:0];
+    assign y = _y[7:0];
     DSP48E2 # (
         .ACASCREG(1),
         .ADREG(0),
@@ -72,7 +72,7 @@ module main (
         .B({gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, b[7], b[6], b[5], b[4], b[3], b[2], b[1], b[0]}),
         .BCIN({gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd}),
         .BCOUT(),
-        .C({gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, c[15], c[14], c[13], c[12], c[11], c[10], c[9], c[8], c[7], c[6], c[5], c[4], c[3], c[2], c[1], c[0]}),
+        .C({gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, gnd, c[7], c[6], c[5], c[4], c[3], c[2], c[1], c[0]}),
         .CARRYCASCIN(gnd),
         .CARRYCASCOUT(),
         .CARRYIN(gnd),
