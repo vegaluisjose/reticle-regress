@@ -59,7 +59,7 @@ module test();
         end
     end
 
-    // run for 5010 cycles, gsr takes 5k cycles to init at 1ps
+    // run for 10 cycles
     always @(posedge clock) begin
         if (cycles == 32'd10) begin
             $finish;
